@@ -3854,6 +3854,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Main/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Main.dll": {}
+        }
       }
     }
   },
@@ -10855,10 +10865,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Main/1.0.0": {
+      "type": "project",
+      "path": "../Main/Main.csproj",
+      "msbuildProject": "../Main/Main.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Main >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.16",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.16",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
@@ -10873,11 +10889,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nandh\\source\\repos\\HotelBookingSystem\\HotelBookingSystem\\HotelBookingSystem.csproj",
+      "projectUniqueName": "C:\\Users\\nandh\\source\\repos\\HotelBooking\\HotelBookingSystem\\HotelBookingSystem.csproj",
       "projectName": "HotelBookingSystem",
-      "projectPath": "C:\\Users\\nandh\\source\\repos\\HotelBookingSystem\\HotelBookingSystem\\HotelBookingSystem.csproj",
+      "projectPath": "C:\\Users\\nandh\\source\\repos\\HotelBooking\\HotelBookingSystem\\HotelBookingSystem.csproj",
       "packagesPath": "C:\\Users\\nandh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nandh\\source\\repos\\HotelBookingSystem\\HotelBookingSystem\\obj\\",
+      "outputPath": "C:\\Users\\nandh\\source\\repos\\HotelBooking\\HotelBookingSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nandh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10893,7 +10909,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nandh\\source\\repos\\HotelBooking\\Main\\Main.csproj": {
+              "projectPath": "C:\\Users\\nandh\\source\\repos\\HotelBooking\\Main\\Main.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

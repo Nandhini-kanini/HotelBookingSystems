@@ -1,6 +1,4 @@
-﻿
-
-using HotelBookingSystem.Model;
+﻿using HotelBookingSystem.Model;
 using HotelManagement.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -73,4 +71,6 @@ namespace SampOnetoManyAPI.Controllers
         }
     }
 }
+
+
 
