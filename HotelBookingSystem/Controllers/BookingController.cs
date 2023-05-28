@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BigBang.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookingsController : ControllerBase

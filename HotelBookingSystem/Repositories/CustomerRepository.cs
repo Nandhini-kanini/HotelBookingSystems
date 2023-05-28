@@ -20,7 +20,7 @@ namespace HotelManagement.Repositories
         {
             try
             {
-                return _customerContext.Customers.ToList();
+                return _customerContext.Customers.Include(x => x.Hotel).ToList();
             }
             catch (Exception ex)
             {
