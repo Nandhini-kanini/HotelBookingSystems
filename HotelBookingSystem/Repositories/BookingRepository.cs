@@ -50,10 +50,10 @@ namespace BigBang.Repositories
                 {
                     if (room.RoomCount > 0)
                     {
-                        room.RoomCount--; // Decrease the available room count
-                        _bookingContext.Entry(room).State = EntityState.Modified; // Update the room count in the database
+                        room.RoomCount--; 
+                        _bookingContext.Entry(room).State = EntityState.Modified; 
 
-                        // Assign the room to the booking
+                        
                         booking.Room = room;
                     }
                     else
