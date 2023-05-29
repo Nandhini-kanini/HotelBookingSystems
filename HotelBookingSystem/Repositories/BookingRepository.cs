@@ -21,7 +21,9 @@ namespace BigBang.Repositories
             }
             catch (Exception ex)
             {
+                
                 throw new Exception("Failed to retrieve bookings.", ex);
+                
             }
         }
 
@@ -91,5 +93,7 @@ namespace BigBang.Repositories
                 throw new Exception("Failed to update booking.", ex);
             }
         }
+
+
     }
 }

@@ -1,0 +1,18 @@
+Exception occurred at 5/29/2023 8:29:09 AM:
+Message: Value cannot be null. (Parameter 'entity')
+StackTrace:    at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at HotelManagement.Repositories.CustomerRepository.DeleteCustomer(Int32 CustomerId) in C:\Users\nandh\source\repos\HotelBooking\HotelBookingSystem\Repositories\CustomerRepository.cs:line 82
+
+Exception occurred at 5/29/2023 8:42:15 AM:
+Message: Value cannot be null. (Parameter 'entity')
+StackTrace:    at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at HotelManagement.Repositories.EmployeeRepository.DeleteEmployee(Int32 EmployeeId) in C:\Users\nandh\source\repos\HotelBooking\HotelBookingSystem\Repositories\EmployeeRepository.cs:line 83
+
+Exception occurred at 5/29/2023 9:01:19 AM:
+Message: Value cannot be null. (Parameter 'entity')
+StackTrace:    at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at HotelManagement.Repositories.CustomerRepository.DeleteCustomer(Int32 CustomerId) in C:\Users\nandh\source\repos\HotelBooking\HotelBookingSystem\Repositories\CustomerRepository.cs:line 83
+

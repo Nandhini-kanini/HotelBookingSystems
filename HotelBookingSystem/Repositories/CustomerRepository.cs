@@ -10,7 +10,7 @@ namespace HotelManagement.Repositories
     public class CustomerRepository : ICustomer
     {
         private readonly HotelContext _customerContext;
-
+        private readonly string logFilePath = "errorlog.txt";
         public CustomerRepository(HotelContext con)
         {
             _customerContext = con;
@@ -24,6 +24,7 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
+                
                 throw new Exception("Failed to retrieve customers.", ex);
             }
         }
@@ -36,6 +37,7 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
+                
                 throw new Exception("Failed to retrieve customer by ID.", ex);
             }
         }
@@ -68,6 +70,7 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
+                
                 throw new Exception("Failed to update customer.", ex);
             }
         }
@@ -83,8 +86,11 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
-                throw new Exception("Failed to delete customer.", ex);
+                string errorMessage = "Failed to delete customer. " + "Invalid number: " + CustomerId.ToString();
+                LogException(errorMessage, ex);
+                throw new Exception(errorMessage, ex);
             }
+
         }
 
         public IEnumerable<Hotel> FilterHotels(string location)
@@ -139,6 +145,23 @@ namespace HotelManagement.Repositories
 
                 return priceQuery.ToList();
            
+        }
+        private void LogException(string errorMessage,Exception ex)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(logFilePath, true))
+                {
+                    writer.WriteLine($"Exception occurred at {DateTime.UtcNow}:");
+                    writer.WriteLine($"Message: {ex.Message}");
+                    writer.WriteLine($"StackTrace: {ex.StackTrace}");
+                    writer.WriteLine();
+                }
+            }
+            catch
+            {
+                throw new Exception("Unable to create log");
+            }
         }
     }
 }

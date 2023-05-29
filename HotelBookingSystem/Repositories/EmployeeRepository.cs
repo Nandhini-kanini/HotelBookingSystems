@@ -10,7 +10,7 @@ namespace HotelManagement.Repositories
     public class EmployeeRepository : IEmployee
     {
         private readonly HotelContext _employeeContext;
-
+        
         public EmployeeRepository(HotelContext con)
         {
             _employeeContext = con;
@@ -24,6 +24,7 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
+                
                 throw new Exception("Failed to retrieve employees.", ex);
             }
         }
@@ -53,6 +54,7 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
+
                 throw new Exception("Failed to create employee.", ex);
             }
         }
@@ -84,8 +86,10 @@ namespace HotelManagement.Repositories
             }
             catch (Exception ex)
             {
+
                 throw new Exception("Failed to delete employee.", ex);
             }
         }
+      
     }
 }
